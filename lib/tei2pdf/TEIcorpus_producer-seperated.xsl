@@ -50,14 +50,13 @@
     <xsl:template match="/">
 
         <teiCorpus xml:id="Book_Corpus">
-
+<!--
             <xsl:call-template name="TEICorpusHeader"/>
-
+-->
             <!-- Begin repeating corpus info -->
 
             <!-- Introductory Materials -->
-                
-            <xsl:value-of select=".//keywords[@n='subcategory']"/>
+
             <xsl:if test="functx:equal-any-of(normalize-space(.//keywords[@n = 'subcategory']/data(.)),$types/type/item)">
                 <xsl:variable name="id"><xsl:value-of select="/TEI/@xml:id"/></xsl:variable>
                 <TEI n="{$id}">
