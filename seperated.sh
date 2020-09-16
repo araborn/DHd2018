@@ -12,6 +12,6 @@ FOP_OPTS="${fop_opts}" "${fop_bin}" -c "${fop_conf}" "${sep_fo}/${i%$searchstrin
 
 
 if "$cleanup"; then
-    mv $sep_pdf $output_path
+    mv $sep_pdf/*.pdf $output_path/
     rm -r $seperated_path
 fi

@@ -45,14 +45,12 @@
             <item>Sektion</item>
             <item>Vortrag</item>
             <item>Poster</item>
+            <item>Posterpräsentation</item>
         </type>
     </xsl:variable>
     <xsl:template match="/">
 
         <teiCorpus xml:id="Book_Corpus">
-<!--
-            <xsl:call-template name="TEICorpusHeader"/>
--->
             <!-- Begin repeating corpus info -->
 
             <!-- Introductory Materials -->
@@ -90,59 +88,6 @@
         <xsl:copy>
             <xsl:apply-templates select="@*|node()"/>
         </xsl:copy>
-    </xsl:template>
-
-    <xsl:template name="TEICorpusHeader">
-
-            <teiHeader>
-                <fileDesc>
-                    <titleStmt>
-                        <title>Digital Humanities 2013 Combined Abstracts</title>
-                        <author>
-                        </author>
-                    </titleStmt>
-                    <publicationStmt>
-                        <authority></authority>
-                        <publisher>University of Nebraska-Lincoln</publisher>
-                        <distributor>
-                            <name>Center for Digital Research in the Humanities</name>
-                            <address>
-<addrLine>319 Love Library</addrLine>
-<addrLine>University of Nebraska&#8211;Lincoln</addrLine>
-<addrLine>Lincoln, NE 68588-4100</addrLine>
-<addrLine>cdrh@unl.edu</addrLine>
-</address>
-                        </distributor>
-                        <pubPlace>Lincoln, Nebraska</pubPlace>
-                        <address>
-<addrLine>University of Nebraska-Lincoln</addrLine>
-<addrLine>Lincoln, NE 68588-4100</addrLine>
-</address>
-                        <availability>
-                            <p></p>
-                        </availability>
-                    </publicationStmt>
-
-                    <notesStmt><note></note></notesStmt>
-
-                    <sourceDesc>
-                        <p>No source: created in electronic format.</p>
-                    </sourceDesc>
-                </fileDesc>
-
-                <profileDesc>
-                    <textClass>
-                    </textClass>
-                </profileDesc>
-
-                <revisionDesc>
-                    <change>
-                        <date when="2013-03-27"></date>
-                        <name>Laura Weakly</name>
-                        <desc>Initial encoding</desc>
-                    </change>
-                </revisionDesc>
-            </teiHeader>
     </xsl:template>
 
 
